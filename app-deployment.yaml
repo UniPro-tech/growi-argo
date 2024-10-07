@@ -15,7 +15,7 @@ spec:
         io.kompose.service: app
     spec:
       containers:
-      - image: weseek/growi:6.0.15
+      - image: weseek/growi:7.0.20
         name: app
         ports:
         - containerPort: 3000
