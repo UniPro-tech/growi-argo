@@ -35,13 +35,14 @@ spec:
           volumeMounts:
             - mountPath: /usr/share/elasticsearch/data
               name: es-data
-            - mountPath: /usr/share/elasticsearch/config/
+            - mountPath: /usr/share/elasticsearch/config/elasticsearch.yml
               name: elasticsearch-hostpath1
+              subPath: elasticsearch.yml
       restartPolicy: Always
       volumes:
         - persistentVolumeClaim:
             claimName: es
           name: es-data
-        - persistentVolumeClaim:
-            claimName: es-conf
+        - configMap:
+            name: es-conf
           name: elasticsearch-hostpath1
