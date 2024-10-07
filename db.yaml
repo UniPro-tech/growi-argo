@@ -16,7 +16,7 @@ spec:
     name: db-data
   nfs:
     server: nfs.unipro.infra
-    path: /nfs/infra/growi/db
+    path: /nfs/infra/growi/db/data
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
