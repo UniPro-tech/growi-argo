@@ -12,7 +12,7 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   claimRef:
-    namespace: app
+    namespace: growi
     name: es
   nfs:
     server: nfs.unipro.infra
