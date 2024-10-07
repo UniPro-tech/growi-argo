@@ -16,9 +16,9 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: mediawiki
+            name: app
             port:
-              number: 80
+              number: 3000
   tls:
   - hosts:
     - wiki.uniproject-tech.net
