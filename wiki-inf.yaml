@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: growi-db-data
+  name: growi-app
   annotations:
     volume.beta.kubernetes.io/storage-class: "slow"
 spec:
@@ -13,7 +13,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   claimRef:
     namespace: app
-    name: db-data
+    name: data
   nfs:
     server: nfs.unipro.infra
     path: /nfs/infra/growi/app
@@ -21,7 +21,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: app
+  name: data
   labels:
     app: growi
   annotations:
