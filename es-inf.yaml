@@ -13,7 +13,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   claimRef:
     namespace: app
-    name: db-es
+    name: es
   nfs:
     server: nfs.unipro.infra
     path: /nfs/infra/growi/es

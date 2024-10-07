@@ -41,7 +41,7 @@ spec:
       restartPolicy: Always
       volumes:
         - persistentVolumeClaim:
-            claimName: es-data
+            claimName: es
           name: es-data
         - configMap:
             name: es-config
