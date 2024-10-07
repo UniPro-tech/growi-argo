@@ -43,6 +43,6 @@ spec:
         - persistentVolumeClaim:
             claimName: es
           name: es-data
-        - configMap:
-            name: es-config
+        - persistentVolumeClaim:
+            claimName: es-conf
           name: elasticsearch-hostpath1
