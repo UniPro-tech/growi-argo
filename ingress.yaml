@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: mediawiki-ingress
+  name: growi-ingress
   annotations:
     cert-manager.io/cluster-issuer: cluster-issuer
     nginx.ingress.kubernetes.io/rewrite-target: /$1
@@ -22,4 +22,30 @@ spec:
   tls:
   - hosts:
     - wiki.uniproject-tech.net
+    secretName: mediawiki-tls
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: growi-ogp-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: cluster-issuer
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    #nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: ogp.wiki.uniproject-tech.net
+    http:
+      paths:
+      - path: /(?!\.well-known/.+)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: app
+            port:
+              number: 3000
+  tls:
+  - hosts:
+    - ogp.wiki.uniproject-tech.net
     secretName: mediawiki-tls
