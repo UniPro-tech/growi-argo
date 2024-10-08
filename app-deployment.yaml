@@ -29,6 +29,8 @@ spec:
           value: changeme
         - name: AUDIT_LOG_ENABLED
           value: "true"
+        - name: OGP_URI
+          value: https://ogp:8080
       volumes:
       - name: growi-data
         persistentVolumeClaim:

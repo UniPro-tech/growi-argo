@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: ogp
+  name: ogp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: ogp
+  template:
+    metadata:
+      labels:
+        io.kompose.service: ogp
+    spec:
+      containers:
+      - image: localhost:3200/growi-ogp:1.0.0
+        name: app
+        ports:
+        - containerPort: 8088
+        imagePullPolicy: IfNotPresent
+      volumes:
+      - name: growi-data
+        persistentVolumeClaim:
+          claimName: data
