@@ -48,4 +48,4 @@ spec:
   tls:
   - hosts:
     - ogp.wiki.uniproject-tech.net
-    secretName: mediawiki-tls
+    secretName: ogp-wiki-tls
