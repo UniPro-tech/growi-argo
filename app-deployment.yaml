@@ -27,6 +27,8 @@ spec:
           value: mongodb://mongo:27017/growi
         - name: PASSWORD_SEED
           value: changeme
+        - name: AUDIT_LOG_ENABLED
+          value: "true"
       volumes:
       - name: growi-data
         persistentVolumeClaim:
