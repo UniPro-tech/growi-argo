@@ -10,4 +10,4 @@ spec:
       port: 8088
       targetPort: 8088
   selector:
-    io.kompose.service: app
+    io.kompose.service: ogp
