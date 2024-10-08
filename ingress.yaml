@@ -44,7 +44,7 @@ spec:
           service:
             name: app
             port:
-              number: 3000
+              number: 8080
   tls:
   - hosts:
     - ogp.wiki.uniproject-tech.net
