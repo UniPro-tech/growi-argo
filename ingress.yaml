@@ -44,7 +44,7 @@ spec:
           service:
             name: ogp
             port:
-              number: 8080
+              number: 8088
   tls:
   - hosts:
     - ogp.wiki.uniproject-tech.net
