@@ -42,7 +42,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: app
+            name: ogp
             port:
               number: 8080
   tls:
