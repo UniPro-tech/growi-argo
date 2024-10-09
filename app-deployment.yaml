@@ -30,7 +30,7 @@ spec:
         - name: AUDIT_LOG_ENABLED
           value: "true"
         - name: OGP_URI
-          value: https://ogp.wiki.uniproject-tech.net
+          value: http://ogp:8088
       volumes:
       - name: growi-data
         persistentVolumeClaim:
