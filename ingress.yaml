@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: growi-ingress
   annotations:
-    #cert-manager.io/cluster-issuer: cluster-issuer
+    cert-manager.io/cluster-issuer: le-cf-prod
     nginx.ingress.kubernetes.io/rewrite-target: /$1
     #nginx.ingress.kubernetes.io/ssl-redirect: "true"
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
@@ -21,17 +21,17 @@ spec:
             name: app
             port:
               number: 3000
-  #tls:
-  #- hosts:
-  #  - wiki.uniproject-tech.net
-  #  secretName: mediawiki-tls
+  tls:
+  - hosts:
+    - wiki.uniproject-tech.net
+    secretName: mediawiki-tls
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: growi-ogp-ingress
   annotations:
-    cert-manager.io/cluster-issuer: cluster-issuer
+    #cert-manager.io/cluster-issuer: le-cf-prod
     nginx.ingress.kubernetes.io/rewrite-target: /$1
     #nginx.ingress.kubernetes.io/ssl-redirect: "true"
 spec:
