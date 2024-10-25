@@ -15,7 +15,7 @@ spec:
         io.kompose.service: ogp
     spec:
       containers:
-      - image: localhost:32000/growi-ogp:1.0.2
+      - image: registry.uniproject-tech.net/growi-ogp:1.0.2
         name: app
         ports:
         - containerPort: 8088
