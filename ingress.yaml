@@ -11,43 +11,43 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: wiki.uniproject-tech.net
-    http:
-      paths:
-      - path: /(?!\.well-known/.+)(.*)
-        pathType: Prefix
-        backend:
-          service:
-            name: app
-            port:
-              number: 3000
+    - host: wiki.uniproject.jp
+      http:
+        paths:
+          - path: /(?!\.well-known/.+)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: app
+                port:
+                  number: 3000
   tls:
-  - hosts:
-    - wiki.uniproject-tech.net
-    secretName: mediawiki-tls
+    - hosts:
+        - wiki.uniproject.jp
+      secretName: wiki-tls
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: growi-ogp-ingress
   annotations:
-    #cert-manager.io/cluster-issuer: le-cf-prod
+    cert-manager.io/cluster-issuer: le-cf-prod
     nginx.ingress.kubernetes.io/rewrite-target: /$1
     #nginx.ingress.kubernetes.io/ssl-redirect: "true"
 spec:
   ingressClassName: nginx
   rules:
-  - host: ogp.wiki.uniproject-tech.net
-    http:
-      paths:
-      - path: /(?!\.well-known/.+)(.*)
-        pathType: Prefix
-        backend:
-          service:
-            name: ogp
-            port:
-              number: 8088
+    - host: ogp.wiki.uniproject.jp
+      http:
+        paths:
+          - path: /(?!\.well-known/.+)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: ogp
+                port:
+                  number: 8088
   tls:
-  - hosts:
-    - ogp.wiki.uniproject-tech.net
-    secretName: ogp-wiki-tls
+    - hosts:
+        - ogp.wiki.uniproject.jp
+      secretName: ogp-wiki-tls
