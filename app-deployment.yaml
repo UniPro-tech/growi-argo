@@ -24,7 +24,7 @@ spec:
         - name: ELASTICSEARCH_URI
           value: http://elasticsearch:9200/growi
         - name: MONGO_URI
-          value: mongodb://mongo:27017/growi
+          value: mongodb://mongo:27017/growi-new
         - name: PASSWORD_SEED
           value: changeme
         - name: AUDIT_LOG_ENABLED
