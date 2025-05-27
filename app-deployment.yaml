@@ -15,23 +15,26 @@ spec:
         io.kompose.service: app
     spec:
       containers:
-      - image: weseek/growi:7.2.4
-        name: app
-        ports:
-        - containerPort: 3000
-        imagePullPolicy: IfNotPresent
-        env:
-        - name: ELASTICSEARCH_URI
-          value: http://elasticsearch:9200/growi
-        - name: MONGO_URI
-          value: mongodb://mongo:27017/growi
-        - name: PASSWORD_SEED
-          value: changeme
-        - name: AUDIT_LOG_ENABLED
-          value: "true"
-        - name: OGP_URI
-          value: http://ogp:8088
+        - image: weseek/growi:7.2.4
+          name: app
+          ports:
+            - containerPort: 3000
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: ELASTICSEARCH_URI
+              value: http://elasticsearch:9200/growi
+            - name: MONGO_URI
+              value: mongodb://mongo:27017/growi
+            - name: PASSWORD_SEED
+              value: changeme
+            - name: AUDIT_LOG_ENABLED
+              value: "true"
+            - name: OGP_URI
+              value: http://ogp:8088
+          volumeMounts:
+            - name: growi-up-files
+              mountPath: /data
       volumes:
-      - name: growi-data
-        persistentVolumeClaim:
-          claimName: data
+        - name: growi-up-files
+          persistentVolumeClaim:
+            claimName: up-files
