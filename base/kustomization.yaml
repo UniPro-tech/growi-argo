@@ -8,6 +8,7 @@ resources:
   - elasticsearch-deployment.yaml
   - elasticsearch-service.yaml
   - es-conf.yaml
+  - es-inf.yaml
   - ingress.yaml
   - mongo-deployment.yaml
   - mongo-service.yaml
