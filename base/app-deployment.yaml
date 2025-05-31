@@ -32,7 +32,7 @@ spec:
             - name: OGP_URI
               value: http://ogp:8088
             - name: AI_ENABLED
-              value: false
+              value: "false"
           volumeMounts:
             - name: growi-up-files
               mountPath: /data
