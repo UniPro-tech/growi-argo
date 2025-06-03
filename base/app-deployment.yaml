@@ -27,6 +27,8 @@ spec:
               value: mongodb://growiuser:mUHw32hTTEaZ@mongodb-mongodb-sharded.mongodb:27017/growi
             - name: PASSWORD_SEED
               value: changeme
+            - name: SECRET_TOKEN
+              value: NRXwRb53dWrq3B8v9Z5y
             - name: AUDIT_LOG_ENABLED
               value: "true"
             - name: OGP_URI
