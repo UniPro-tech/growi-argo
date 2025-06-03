@@ -26,7 +26,7 @@ spec:
             - name: MONGO_URI
               value: mongodb://growiuser:mUHw32hTTEaZ@mongodb-mongodb-sharded.mongodb:27017/growi
             - name: PASSWORD_SEED
-              value: JVZWr4w4ukNHEzpFjjtx
+              value: changeme
             - name: AUDIT_LOG_ENABLED
               value: "true"
             - name: OGP_URI
