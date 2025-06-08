@@ -35,8 +35,6 @@ spec:
               value: http://ogp:8088
             - name: AI_ENABLED
               value: "false"
-            - name: WIP_PAGE_EXPIRATION_SECONDS
-              value: "60"
           volumeMounts:
             - name: growi-up-files
               mountPath: /data
