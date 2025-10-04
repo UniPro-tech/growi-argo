@@ -4,14 +4,11 @@ resources:
   - app-deployment.yaml
   - app-inf.yaml
   - app-service.yaml
-  - db-inf.yaml
   - elasticsearch-deployment.yaml
   - elasticsearch-service.yaml
   - es-conf.yaml
   - es-inf.yaml
   - ingress.yaml
-  - mongo-deployment.yaml
-  - mongo-service.yaml
 labels:
   - includeSelectors: true
     pairs:
