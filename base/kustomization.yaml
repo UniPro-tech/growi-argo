@@ -9,6 +9,7 @@ resources:
   - es-conf.yaml
   - es-inf.yaml
   - ingress.yaml
+  - imageUpdater.yaml
 labels:
   - includeSelectors: true
     pairs:
