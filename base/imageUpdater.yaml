@@ -1,0 +1,14 @@
+apiVersion: argocd-image-updater.argoproj.io/v1alpha1
+kind: ImageUpdater
+metadata:
+  name: growi
+  namespace: argocd
+spec:
+  namespace: argocd
+  applicationRefs:
+    - namePattern: "growi"
+      images:
+        - alias: "growi"
+          imageName: "weseek/growi:7.x.x"
+          commonUpdateSettings:
+            updateStrategy: "semver"
