@@ -12,6 +12,7 @@ resources:
   - imageUpdater.yaml
   - mongo-deployment.yaml
   - mongo-service.yaml
+  - db-inf.yaml
 labels:
   - includeSelectors: true
     pairs:
