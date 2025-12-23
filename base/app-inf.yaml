@@ -8,7 +8,7 @@ metadata:
 spec:
   accessModes:
     - ReadWriteMany
-  storageClass: "nfs-retain"
+  storageClassName: "nfs-retain"
   resources:
     requests:
       storage: 10Gi
