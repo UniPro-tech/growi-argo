@@ -10,7 +10,7 @@ resources:
   - es-inf.yaml
   - ingress.yaml
   - imageUpdater.yaml
-  - mongo-deplyment.yaml
+  - mongo-deployment.yaml
   - mongo-service.yaml
 labels:
   - includeSelectors: true
