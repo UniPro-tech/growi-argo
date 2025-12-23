@@ -24,9 +24,9 @@ spec:
             - name: ELASTICSEARCH_URI
               value: http://elasticsearch:9200/growi
             - name: MONGO_URI
-              value: mongodb://growiuser:mUHw32hTTEaZ@main-cluster-rs0.percona-mongodb:27017/growi
+              value: mongodb://growiuser:mUHw32hTTEaZ@mongo:27017/growi
             - name: PASSWORD_SEED
-              value: changeme
+              value: nupvUIUU9guegu9s2r526
             - name: SECRET_TOKEN
               value: NRXwRb53dWrq3B8v9Z5y
             - name: AUDIT_LOG_ENABLED
