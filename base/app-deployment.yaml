@@ -24,7 +24,7 @@ spec:
             - name: ELASTICSEARCH_URI
               value: http://elasticsearch:9200/growi
             - name: MONGO_URI
-              value: mongodb://growiuser:mUHw32hTTEaZ@mongo:27017/growi
+              value: mongodb://growiuser:mUHw32hTTEaZ@mongo:27017/growi?authSource=admin
             - name: PASSWORD_SEED
               value: nupvUIUU9guegu9s2r526
             - name: SECRET_TOKEN
