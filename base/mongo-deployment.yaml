@@ -35,6 +35,8 @@ spec:
               value: growiuser
             - name: MONGO_INITDB_ROOT_PASSWORD
               value: mUHw32hTTEaZ
+            - name: MONGO_INITDB_DATABASE
+              value: growi
       restartPolicy: Always
       volumes:
         - persistentVolumeClaim:
