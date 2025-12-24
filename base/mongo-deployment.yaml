@@ -31,8 +31,10 @@ spec:
             - mountPath: /data/db
               name: mongo-db
           env:
-            MONGO_INITDB_ROOT_USERNAME: growiuser
-            MONGO_INITDB_ROOT_PASSWORD: mUHw32hTTEaZ
+            - name: MONGO_INITDB_ROOT_USERNAME
+              value: growiuser
+            - name: MONGO_INITDB_ROOT_PASSWORD
+              value: mUHw32hTTEaZ
       restartPolicy: Always
       volumes:
         - persistentVolumeClaim:
