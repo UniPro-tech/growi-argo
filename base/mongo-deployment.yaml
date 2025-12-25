@@ -102,7 +102,7 @@ spec:
     - name: "8081"
       port: 8081
       targetPort: 8081
-  ipFamilyPolicy: PreferDualStack
+  ipFamilyPolicy: SingleStack
   selector:
     io.kompose.service: mongodb-express
 ---
