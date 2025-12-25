@@ -6,7 +6,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`wiki2.uniproject.jp`)
+    - match: Host(`wiki.uniproject.jp`)
       kind: Rule
       services:
         - kind: Service
@@ -27,4 +27,4 @@ spec:
   tls:
     certResolver: cf-prod
     domains:
-      - main: wiki2.uniproject.jp
+      - main: wiki.uniproject.jp
