@@ -105,4 +105,21 @@ spec:
   ipFamilyPolicy: PreferDualStack
   selector:
     io.kompose.service: mongodb-express
-  type: LoadBalancer
+---
+# ingress
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: mongodb-express-ingress
+spec:
+  rules:
+    - host: mongo.uniproject.jp
+      http:
+        paths:
+          - backend:
+              service:
+                name: mongodb-express
+                port:
+                  number: 8081
+            path: /
+            pathType: Prefix
