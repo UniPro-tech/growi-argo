@@ -113,7 +113,7 @@ metadata:
   name: mongodb-express-ingress
 spec:
   rules:
-    - host: mongo.uniproject.jp
+    - host: mongo-dev.uniproject.jp
       http:
         paths:
           - backend:
