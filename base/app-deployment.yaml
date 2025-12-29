@@ -14,6 +14,9 @@ spec:
       labels:
         io.kompose.service: app
     spec:
+      tolerations:
+        - key: "node-role.kubernetes.io/control-plane"
+          effect: "NoSchedule"
       containers:
         - image: weseek/growi:7.2.4
           name: app
