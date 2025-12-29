@@ -9,6 +9,9 @@ metadata:
   name: elasticsearch
 spec:
   replicas: 1
+  tolerations:
+    - key: "node-role.kubernetes.io/control-plane"
+      effect: "NoSchedule"
   selector:
     matchLabels:
       io.kompose.service: elasticsearch
