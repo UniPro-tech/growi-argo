@@ -57,9 +57,6 @@ metadata:
     io.kompose.service: mongodb-express
   name: mongodb-express
 spec:
-  tolerations:
-    - key: "node-role.kubernetes.io/control-plane"
-      effect: "NoSchedule"
   replicas: 1
   selector:
     matchLabels:
@@ -74,6 +71,9 @@ spec:
       labels:
         io.kompose.service: mongodb-express
     spec:
+      tolerations:
+        - key: "node-role.kubernetes.io/control-plane"
+          effect: "NoSchedule"
       containers:
         - image: mongo-express:1.0.0
           name: mongodb-express
