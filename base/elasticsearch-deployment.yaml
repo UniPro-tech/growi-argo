@@ -42,6 +42,11 @@ spec:
               name: elasticsearch-hostpath1
               subPath: elasticsearch.yml
       restartPolicy: Always
+      resources:
+        requests:
+          memory: "512Mi"
+        limits:
+          memory: "1Gi"
       volumes:
         - persistentVolumeClaim:
             claimName: es
