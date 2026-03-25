@@ -37,6 +37,11 @@ spec:
               value: mUHw32hTTEaZ
             - name: MONGO_INITDB_DATABASE
               value: growi
+          resources:
+            limits:
+              memory: 512Mi
+            requests:
+              memory: 256Mi
       restartPolicy: Always
       volumes:
         - persistentVolumeClaim:
