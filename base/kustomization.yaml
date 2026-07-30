@@ -8,7 +8,7 @@ resources:
   - elasticsearch-service.yaml
   - es-conf.yaml
   - es-inf.yaml
-  - gateway.yaml
+  - httproute.yaml
   - imageUpdater.yaml
   - mongo-deployment.yaml
   - mongo-service.yaml
